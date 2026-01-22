@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atul Surendra Kotian - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        .gallery-item {
+            cursor: pointer;
+        }
+        .gallery-item img {
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover img {
+            opacity: 0.8;
+        }
+    </style>
     <style>
         * {
             margin: 0;
@@ -527,35 +540,43 @@
         </div>
     </section>
 
-    <section id="gallery">
+<section id="gallery">
         <h2>Gallery - Hobbies & Travel</h2>
         <div class="gallery">
             <div class="gallery-item">
-                <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/20260118_125309.jpg?raw=true" alt="Elephanta Caves">
+                <a href="https://github.com/atulkotian/atulkotian.github.io/blob/main/20260118_125309.jpg?raw=true" data-lightbox="gallery" data-title="Elephanta Caves, Mumbai India (January 2026)">
+                    <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/20260118_125309.jpg?raw=true" alt="Elephanta Caves">
+                </a>
                 <p class="editable" onclick="editText(this)">Elephanta Caves, Mumbai India (January 2026)</p>
             </div>
             <div class="gallery-item">
-                <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/20250817_191507.jpg?raw=true" alt="Fitness">
-                <p class="editable" onclick="editText(this)">Health & Fitness (July 2025)</p>
-            </div>
-            <div class="gallery-item">
-                <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/20250614_121145.jpg?raw=true" alt="SF Stationary Club">
+                <a href="https://github.com/atulkotian/atulkotian.github.io/blob/main/20250614_121145.jpg?raw=true" data-lightbox="gallery" data-title="San Francisco Stationary Club Monthly Meetup, Alameda CA (June 2025)">
+                    <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/20250614_121145.jpg?raw=true" alt="SF Stationary Club">
+                </a>
                 <p class="editable" onclick="editText(this)">San Francisco Stationary Club Monthly Meetup, Alameda CA (June 2025)</p>
             </div>
             <div class="gallery-item">
-                <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/20250419_151310.jpg?raw=true" alt="San Francisco Cherry Blossom Festival">
+                <a href="https://github.com/atulkotian/atulkotian.github.io/blob/main/20250419_151310.jpg?raw=true" data-lightbox="gallery" data-title="Washi Ningyo (Washi Paper Dolls) Demonstration Workshop, San Francisco Japantown CA (Apr 2025)">
+                    <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/20250419_151310.jpg?raw=true" alt="San Francisco Cherry Blossom Festival">
+                </a>
                 <p class="editable" onclick="editText(this)">Washi Ningyo (Washi Paper Dolls) Demonstration Workshop, San Francisco Japantown CA (Apr 2025)</p>
             </div>
             <div class="gallery-item">
-                <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/20231025_101235.jpg?raw=true" alt="Antelope Canyon, Page AZ">
+                <a href="https://github.com/atulkotian/atulkotian.github.io/blob/main/20231025_101235.jpg?raw=true" data-lightbox="gallery" data-title="Antelope Canyon, Page AZ (Oct 2023)">
+                    <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/20231025_101235.jpg?raw=true" alt="Antelope Canyon, Page AZ">
+                </a>
                 <p class="editable" onclick="editText(this)">Antelope Canyon, Page AZ (Oct 2023)</p>
             </div>
             <div class="gallery-item">
-                <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/20231022_170805.jpg?raw=true" alt="Golden gate Bridge">
+                <a href="https://github.com/atulkotian/atulkotian.github.io/blob/main/20231022_170805.jpg?raw=true" data-lightbox="gallery" data-title="Golden Gate Bridge, San Francisco CA (October 2023)">
+                    <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/20231022_170805.jpg?raw=true" alt="Golden gate Bridge">
+                </a>
                 <p class="editable" onclick="editText(this)">Golden Gate Bridge, San Francisco CA (October 2023)</p>
             </div>
             <div class="gallery-item">
-                <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/IMG_3511.JPG?raw=true" alt="Sindhu Sankalp Oct 2019">
+                <a href="https://github.com/atulkotian/atulkotian.github.io/blob/main/IMG_3511.JPG?raw=true" data-lightbox="gallery" data-title="SK-132 Team in front of RV Sindhu Sankalp, Murmagoa Port Goa, India (October 2019)">
+                    <img src="https://github.com/atulkotian/atulkotian.github.io/blob/main/IMG_3511.JPG?raw=true" alt="Sindhu Sankalp Oct 2019">
+                </a>
                 <p class="editable" onclick="editText(this)">SK-132 Team in front of RV Sindhu Sankalp, Murmagoa Port Goa, India (October 2019)</p>
             </div>
         </div>
@@ -564,6 +585,10 @@
     <footer>
         <p>&copy; 2026 Atul Surendra Kotian. All rights reserved.</p>
     </footer>
+
+    <script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
     <script>
         // Only enable editing if file is opened locally (not on GitHub)
@@ -621,5 +646,6 @@
 </body>
 
 </html>
+
 
 
