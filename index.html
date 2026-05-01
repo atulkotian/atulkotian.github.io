@@ -799,9 +799,10 @@ function showView(v) {
 }
 
 function openPCR() {
-  document.getElementById('pcr-view').classList.add('active');
-  document.body.classList.add('pcr-open');
-  pcrInit();
+  const pcrContent = document.getElementById('pcr-view').outerHTML;
+  const fullPage = `<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>PCR Supermix Calculator</title><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"><style>body{margin:0;background:#0a0e14;}</style></head><body>${pcrContent}<script>${document.querySelector('script:last-of-type').textContent}<\/script></body></html>`;
+  const blob = new Blob([fullPage], {type: 'text/html'});
+  window.open(URL.createObjectURL(blob), '_blank');
 }
 function closePCR() {
   document.getElementById('pcr-view').classList.remove('active');
